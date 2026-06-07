@@ -4,7 +4,6 @@ WORKDIR /app
 
 COPY package.json pnpm-lock.yaml .npmrc /app/
 
-RUN npm install -g pm2 tsx pnpm && pnpm install --config.scripts-prepend-node-path=true
 
 COPY . /app/
 
