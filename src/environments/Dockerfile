@@ -6,7 +6,7 @@ RUN apk add --no-cache python3 make g++ cairo-dev jpeg-dev pango-dev giflib-dev 
 
 COPY package.json pnpm-lock.yaml .npmrc /app/
 
-RUN npm install -g pm2 tsx pnpm && pnpm install --allow-scripts=all
+RUN npm install -g pm2 tsx pnpm && pnpm install 
 
 COPY . /app/
 
