@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package.json pnpm-lock.yaml .npmrc /app/
 
-RUN npm install -g pm2 tsx pnpm && pnpm install
+RUN npm install -g pm2 tsx pnpm && pnpm install --allow-scripts
 
 COPY . /app/
 
